@@ -8,8 +8,10 @@ use_behavior_tree   = @settings["behavior_tree"] == "true"
 
 # Other parameters
 behavior_type       = "position"
-
+mission_one_drone = false
 %>
+
+
 attach: false
 root: ./
 startup_window: alphanumeric_viewer
@@ -69,3 +71,18 @@ windows:
             tree:=./trees/square.xml
         <%- end %>
         - echo Run here the mission
+
+  - mission_one_drone:
+      layout:
+      panes:
+        - ros2 launch as2_knowledge_graph as2_knowledge_graph_launch.py
+            use_sim_time:=true  
+        - rqt
+        - ros2 run as2_knowledge_graph_integration insert_knowledgeV2.py 
+            --ros-args --remap __ns:="/<%= drone_namespace %>"
+
+        <%- if mission_one_drone %>
+        - ros2 launch as2_mission_one_drone mission_one_drone_launch.py 
+            drone_id:=<%= drone_namespace %>
+            use_sim_time:=true
+        <%- end %>

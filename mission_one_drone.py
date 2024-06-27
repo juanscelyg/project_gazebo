@@ -83,6 +83,7 @@ def drone_run(drone_interface: DroneInterface, graph_reader: ReadMyGraph):
                         command['continue_path'] = False
                         command['go_home'] = True
                         drone_interface.go_to.stop()    # Stop the drone
+                        sleep(3)
                         break
 
                 if drone_interface.go_to.wait_to_result():
