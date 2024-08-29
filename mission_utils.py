@@ -28,8 +28,8 @@ def go_home(drone_interface: DroneInterface, home: list, speed: float, go_home: 
     if go_home:
         print("Go to home")
         drone_interface.go_to(*home, speed=speed, wait=True, yaw_mode=YawMode.PATH_FACING)
-        while drone_interface.go_to.is_running():
-            print('GOING HOME')
+        # while drone_interface.go_to.is_running():
+        #     print('GOING HOME')
         if drone_interface.go_to.wait_to_result():
             print("Go to home done")
             sleep(sleep_time)

@@ -7,7 +7,7 @@
             "xyz": [
                 1.0,
                 1.0,
-                0.3
+                10.0
             ],
             "rpy": [
                 0,
@@ -16,5 +16,20 @@
             ],
             "flight_time": 60
         }
+    ],
+    "objects": [
+        {
+            "model_type": "standing_person",
+            "model_name": "person",
+            "xyz": [
+                2.0,
+                1.5,
+                0.0
+            ]
+        },
+        {           
+            "model_type": "grasspatch",
+            "model_name": "grasspatch"}
     ]
+
 }

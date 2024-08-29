@@ -8,14 +8,24 @@ simulation_config = @settings["simulation_config"]
 use_sim_time      = true
 %>
 
+name: gazebo
 attach: true
 root: ./
+pre_window: humble; clear
 startup_window: gazebo
-# on_project_exit: pkill -9 -f "gazebo"
 windows:
-  - gazebo:
-      layout:
-      panes:
-        - ros2 launch as2_gazebo_assets launch_simulation.py
-          use_sim_time:=<%= use_sim_time %>
-          simulation_config_file:=<%= simulation_config %>
+    - gazebo:
+        layout:
+        panes:
+            - ros2 launch as2_gazebo_assets gzsim.launch.py
+                use_sim_time:=<%= use_sim_time %>
+                simulation_config_file:=<%= simulation_config %>
+            - sleep 10; ros2 launch as2_gazebo_assets spawn.launch.py
+                use_sim_time:=<%= use_sim_time %>
+                simulation_config_file:=<%= simulation_config %>
+            - sleep 10; ros2 launch as2_gazebo_assets world_bridges.py
+                use_sim_time:=<%= use_sim_time %>
+                simulation_config_file:=<%= simulation_config %>
+            - sleep 30; ros2 launch as2_gazebo_assets object_bridges.py
+                use_sim_time:=<%= use_sim_time %>
+                simulation_config_file:=<%= simulation_config %>

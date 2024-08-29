@@ -39,7 +39,7 @@ def drone_run(drone_interface: DroneInterface, graph_reader: ReadMyGraph):
         [dim, ascend + 3, height],
         [-dim, ascend + 4, height],
     ]
-    home = [0, 0, height]   # home position
+    home = [1, 1, height]   # home position
     command = {'go_home': False, 'land': False, 'continue_path': True}
 
     print("Start mission")
@@ -69,7 +69,7 @@ def drone_run(drone_interface: DroneInterface, graph_reader: ReadMyGraph):
                 print(drone_interface.go_to.is_running())
                 while drone_interface.go_to.is_running():
                     # while drone_interface.go_to.is_running() == False:
-                    print('RUNNING')
+                    # print('RUNNING')
                     if (graph_reader.check_status_of_edge('Dron', 'Battery', 'low')):
                         print('Battery is low')
                         print('Emergency landing')
@@ -78,7 +78,7 @@ def drone_run(drone_interface: DroneInterface, graph_reader: ReadMyGraph):
                         drone_interface.go_to.stop()    # Stop the drone
                         break
 
-                    if (graph_reader.check_status_of_edge('Dron', 'Person', 'seeing')):
+                    if (graph_reader.check_status_of_edge('Dron', 'Person', 'located')):
                         print('The person has been located')
                         command['continue_path'] = False
                         command['go_home'] = True
