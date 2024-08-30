@@ -75,7 +75,7 @@ windows:
   - mission_one_drone:
       layout:
       panes:
-        # - ros2 launch as2_knowledge_graph as2_knowledge_graph_launch.py
+        - ros2 launch as2_knowledge_graph as2_knowledge_graph_launch.py
             use_sim_time:=true  
         - rqt
         - sleep 30 && ros2 run as2_knowledge_graph_integration insert_knowledgeV2.py 
