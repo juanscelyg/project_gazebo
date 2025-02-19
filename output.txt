@@ -1,0 +1,46 @@
+[INFO] [launch]: All log files can be found below /home/juanscelyg/.ros/log/2025-02-18-13-24-42-729437-JSCG-MSI-178435
+[INFO] [launch]: Default logging verbosity is set to INFO
+empty
+/tmp/empty.sdf
+
+empty
+[INFO] [gazebo-1]: process started with pid [178442]
+[INFO] [monitor_sim-2]: process started with pid [178443]
+[INFO] [create-3]: process started with pid [178445]
+[INFO] [parameter_bridge-4]: process started with pid [178446]
+[parameter_bridge-4] [INFO] [1739881483.285089826] [world.ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (ignition.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[create-3] [INFO] [1739881483.783776151] [ros_gz_sim]: Entity creation successfull.
+[INFO] [create-3]: process has finished cleanly [pid 178445]
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: egl: failed to create dri2 screen
+[gazebo-1] libEGL warning: failed to open /dev/dri/card2: Permiso denegado
+[gazebo-1] 
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m14[0m[1;31m: [0m[1;31m[/sdf/model[@name="drone0"]/include[1]/uri:/tmp/DroneTypeEnum.QUADROTOR_0.sdf:L184]: [0m[1;31mMsg: [0m[1;31mUnable to find uri[model://GpsTypeEnum.GPS][0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m14[0m[1;31m: [0m[1;31m[/sdf/model[@name="drone0"]/include[2]/uri:/tmp/DroneTypeEnum.QUADROTOR_0.sdf:L199]: [0m[1;31mMsg: [0m[1;31mUnable to find uri[model://GimbalTypeEnum.GIMBAL_SPEED][0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m20[0m[1;31m: [0m[1;31mMsg: [0m[1;31mChild frame with name[gps] specified by joint with name[gps_joint] not found in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m20[0m[1;31m: [0m[1;31mMsg: [0m[1;31mChild frame with name[gimbal] specified by joint with name[gimbal_joint] not found in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m25[0m[1;31m: [0m[1;31mMsg: [0m[1;31mFrameAttachedToGraph error, Non-LINK vertex with name [drone0::gps_joint] is disconnected; it should have 1 outgoing edge in MODEL attached_to graph.[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m25[0m[1;31m: [0m[1;31mMsg: [0m[1;31mFrameAttachedToGraph error, Non-LINK vertex with name [drone0::gimbal_joint] is disconnected; it should have 1 outgoing edge in MODEL attached_to graph.[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m25[0m[1;31m: [0m[1;31mMsg: [0m[1;31mGraph has __model__ scope but sink vertex named [drone0::gimbal_joint] does not have FrameType LINK or STATIC_MODEL when starting from vertex with name [drone0::gimbal_joint].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m25[0m[1;31m: [0m[1;31mMsg: [0m[1;31mGraph has __model__ scope but sink vertex named [drone0::gps_joint] does not have FrameType LINK or STATIC_MODEL when starting from vertex with name [drone0::gps_joint].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m26[0m[1;31m: [0m[1;31mMsg: [0m[1;31mrelative_to name[gps] specified by joint with name[gps_joint] does not match a nested model, link, joint, or frame name in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m26[0m[1;31m: [0m[1;31mMsg: [0m[1;31mrelative_to name[gimbal] specified by joint with name[gimbal_joint] does not match a nested model, link, joint, or frame name in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m28[0m[1;31m: [0m[1;31mMsg: [0m[1;31mPoseRelativeToGraph error, Vertex with name [drone0::gps_joint] is disconnected; it should have 1 incoming edge in MODEL relative_to graph.[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m28[0m[1;31m: [0m[1;31mMsg: [0m[1;31mPoseRelativeToGraph error, Vertex with name [drone0::gimbal_joint] is disconnected; it should have 1 incoming edge in MODEL relative_to graph.[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m28[0m[1;31m: [0m[1;31mMsg: [0m[1;31mPoseRelativeToGraph unable to find path to source vertex when starting from vertex with id [14].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m28[0m[1;31m: [0m[1;31mMsg: [0m[1;31mPoseRelativeToGraph unable to find path to source vertex when starting from vertex with id [13].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m20[0m[1;31m: [0m[1;31mMsg: [0m[1;31mchild frame with name[gps] specified by joint with name[gps_joint] not found in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m23[0m[1;31m: [0m[1;31mMsg: [0m[1;31mFrameAttachedToGraph unable to find unique frame with name [gps] in graph.[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m20[0m[1;31m: [0m[1;31mMsg: [0m[1;31mchild frame with name[gimbal] specified by joint with name[gimbal_joint] not found in model with name[drone0].[0m[1;31m[0m
+[gazebo-1] [1;31m[Err] [UserCommands.cc:1152] [0m[1;31mError Code [0m[1;31m23[0m[1;31m: [0m[1;31mMsg: [0m[1;31mFrameAttachedToGraph unable to find unique frame with name [gimbal] in graph.[0m[1;31m[0m
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[parameter_bridge-4] [INFO] [1739881491.582841096] [rclcpp]: signal_handler(signum=2)
+[monitor_sim-2] Traceback (most recent call last):
+[monitor_sim-2]   File "/home/juanscelyg/ws/drone_ws/install/as2_gazebo_assets/share/as2_gazebo_assets/launch/monitor_sim.py", line 46, in <module>
+[monitor_sim-2]     monitor_sim()
+[monitor_sim-2]   File "/home/juanscelyg/ws/drone_ws/install/as2_gazebo_assets/share/as2_gazebo_assets/launch/monitor_sim.py", line 25, in monitor_sim
+[monitor_sim-2]     time.sleep(10)
+[monitor_sim-2] KeyboardInterrupt
+[ERROR] [monitor_sim-2]: process has died [pid 178443, exit code -2, cmd 'python3 /home/juanscelyg/ws/drone_ws/install/as2_gazebo_assets/share/as2_gazebo_assets/launch/monitor_sim.py'].
+[INFO] [parameter_bridge-4]: process has finished cleanly [pid 178446]
+[ERROR] [gazebo-1]: process has died [pid 178442, exit code -2, cmd 'ruby $(which gz) sim -r /tmp/empty.sdf --force-version 8'].
